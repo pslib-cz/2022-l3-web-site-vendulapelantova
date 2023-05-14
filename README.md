@@ -9,9 +9,9 @@ Nezapomenu upravit odkazy a "aktivovat" GitHub Pages...
 
 ## ToDo
 - [x] Vytvořit repozitář projektu
-- [ ] Vytvořit Figma projekt
+- [x] Vytvořit Figma projekt
 - [ ] Aktivovat GitHub Pages
-- [ ] Upravit README.md (aktualizace odkazů na Figmu a Web)
+- [x] Upravit README.md (aktualizace odkazů na Figmu a Web)
 - [ ] Hamburger menu (s JS)
 - [ ] Implementována [LightGallery](https://github.com/sachinchoolur/lightGallery)
 - [ ] Implementován [Swiper](https://swiperjs.com/) nebo [Glide](https://glidejs.com/)
