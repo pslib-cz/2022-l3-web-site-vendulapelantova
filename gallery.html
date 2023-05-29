@@ -2,13 +2,19 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Na slovíčko</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobil.css">
+    <script src="./hamburger.js"></script>
+    <link rel="stylesheet" href="./lightGallery/dist/css/lightgallery-bundle.min.css">
+    <title>Žena cyklu - Na slovíčko</title>
+    <link rel="icon" type="image/x-icon" href="./ico/Favicon.svg">
 </head>
 <body>
     <header>
-        <a href="./index.html"><img src="./ico/logo.svg"></a>
+        <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
         <nav>
             <div class="navbar">
                 <div class="container nav-container">
@@ -24,10 +30,309 @@
                         <li><a href="./index.html" class="selected">Úvod</a></li>
                         <li><a href="./gallery.html">Na slovíčko</a></li>
                         <li><a href="./kontakt.html">O mně</a></li>
-                        <li><a href="https://www.instagram.com/zenacyklu/"><img src="./ico/nav-insta.svg"></a></li>
+                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/nav-insta.svg"></a></li>
                 </menu>
             </div>
           </nav>
     </header>
+    <main>
+        <h1>Na slovíčko</h1>
+        <div>
+            <a href="./index.html">Domů</a>
+            <a href="./gallery.html">Na slovíčko</a>
+        </div>
+        <p>Informace a rady, které by se Ti mohly někdy hodit. </p>
+        <section>
+            <h2>Menstruační kalendář</h2>
+            <p>Žena by si měla vést pečlivě a pravidelně menstruační kalendář. Měla by tam uvést 
+                termín začátku a konce menses, každý den spotřebu vložek či tamponů či jiných pomůcek a 
+                sílu krvácení, další projevy (nevolnost) a léky.
+            </p>
+            <p>Vedle toho si žena může vést menses mapu, která je volnou formou, tj. buď obrázek - diagram 
+                nebo zápis. Kromě informací jako v menstruačním kalendáři by sem měla žena zaznamenat za každý 
+                den své nálady, pocity, výkonnost, družnost apod.
+            </p>
+        </section>
+        <section>
+            <h2>Menstruační pomůcky</h2>
+            <div>
+                <p>Menstruační pomůcky, každá je běžně používá, ale známe všechny možné alternativy?</p>
+                <p>V mém dotazníku vyšlo, že 70 ze 121 respondentek používá pouze jednorázové pomůcky. Čím to je? 
+                    Je to tím, že neznáme ekologické řešení či jsou prostě ty neekologické lepší? Nebo je v tom 
+                    otázka ceny?
+                </p>
+            </div>
+            <div>
+                <div>
+                    <h4>Jednorázové vložky</h4>
+                    <ul>
+                        <li>nejčastěji používané</li>
+                        <li>lepí se do kalhotek</li>
+                        <li>mnoho variant a značek</li>
+                        <li><ul>dělí se: klasické a z bio bavlny
+                            <li>klasické - liší se množstvím chem. látek</li>
+                            <li>bio bavlněné - měkčí, méně se zapařují a méně zapáchají</li></ul></li>
+                        <li>neekologické</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Látkové vložky</h4>
+                    <ul>
+                        <li>zapínají se okolo kalhotek</li>
+                        <li>mnoho variant a barev</li>
+                        <li>hůře k sehnání</li>
+                        <li>ekologické - po použití se normálně vyperou</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Menstruační kalhotky</h4>
+                    <ul>
+                        <li>v posledních letech se staly trendem</li>
+                        <li>používají se jako běžné kalhotky</li>
+                        <li>mnoho variant a značek</li>
+                        <li>složitější výměna</li>
+                        <li>dražší, ale vydrží i několik let</li>
+                        <li>ekologické - po použití se normálně vyperou</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tampony</h4>
+                    <ul>
+                        <li>nejčastěji používané</li>
+                        <li>zavádí se do pochvy</li>
+                        <li>mnoho variant a značek</li>
+                        <li>při delším používání mohou způsobovat pocit suchosti a bolesti</li>
+                        <li>pozor na syndrom toxického šoku</li>
+                        <li>často využívané při sportu či cestování</li>
+                        <li>neekologické</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Menstruační kalíšek</h4>
+                    <ul>
+                        <li>zavádí se do pochvy</li>
+                        <li>mnoho variant a značek</li>
+                        <li>nemusí vyhovovat zejména mladším slečnám</li>
+                        <li>dražší, ale vydrží několik let</li>
+                        <li>ekologický - po použití se normálně vypláchne</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Menstruační houba</h4>
+                    <ul>
+                        <li>zavádí se hlouběji do pochvy</li>
+                        <li>snadno přizpůsobitelná velikost</li>
+                        <li>díky horšímu čištění může začít zapáchat</li>
+                        <li>ekologická - po použití se normálně vypláchne</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="galerie" id="my-galerie">
+                <figure class="galerie__fotka">
+                    <a href="./img/full/pexels-karolina-grabowska-7692272.jpg">
+                        <img class="img-responsive" src="./img/small/Rectangle 39.jpg" alt="Jednorázové vložky">
+                    </a>
+                </figure>
+                <figure class="galerie__fotka">
+                    <a href="./img/full/pexels-karolina-grabowska-7692190.jpg">
+                        <img class="img-responsive" src="./img/small/Rectangle 40.jpg" alt="Látkové vložky">
+                    </a>
+                </figure>
+                <figure class="galerie__fotka">
+                    <a href="./img/full/pexels-cottonbro-studio-6542693.jpg">
+                        <img class="img-responsive" src="./img/small/Rectangle 41.jpg" alt="Menstruační kalhotky">
+                    </a>
+                </figure>
+                <figure class="galerie__fotka">
+                    <a href="./img/full/pexels-karolina-grabowska-4239010.jpg">
+                        <img class="img-responsive" src="./img/small/Rectangle 43.jpg" alt="Tampony">
+                    </a>
+                </figure>
+                <figure class="galerie__fotka">
+                    <a href="./img/full/unsplash_SMrcOx2kUSU.jpg">
+                        <img class="img-responsive" src="./img/small/Rectangle 44.jpg" alt="Menstruační kalíšek">
+                    </a>
+                </figure>
+                <figure class="galerie__fotka">
+                    <a href="./img/full/ba0e04f8cfa7a712d8d839549e2b0251.jpg">
+                        <img class="img-responsive" src="./img/small/Rectangle 45.jpg" alt="Menstruační houba">
+                    </a>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>Nemoci cyklu</h2>
+            <p>Onemocnění spojených s ženským cyklem je celá řada. Zde jsou hlavní z nich.</p>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <h3>Syndrom toxického šoku</h3>
+                            <p>Je to ve zkratce TSS. Z relativně zdravého člověka se během chvilky stane kolabující 
+                                jedinec. Zejména mezi mládeží přitom o tomto stavu není mnoho povědomí a mnozí 
+                                tak žijí “na plný plyn”. Onemocnění je způsobeno bakteriemi Stafilokoky. Postihuje 
+                                hlavně ženy do 30 let, ale ohroženi jsou všichni. Onemocnění se projevuje 
+                                zažívacími problémy, prudkým vzrůstem tělesné teploty nad 38,9 °C, poklesem krevního 
+                                tlaku, bolestí svalů, překrvením sliznic, okupováním kůže apod. Je nutné okamžitě 
+                                přivolat lékaře. Původní příčinou souvisí s používáním tamponů. Prevencí je řádná 
+                                hygiena a častá výměna hygienických pomůcek.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Dysmenorea</h3>
+                            <p>Nastává buď po menarché nebo až po několika klidných letech. Projevuje se bolestivou 
+                                menstruací, silnými křečemi, bolestí hlavy, nevolností zejména v prvních dvou dnech 
+                                menstruace. Důvodem vzniku může být anomálie tvaru nebo polohy dělohy, psychické 
+                                problémy, stres. Může být dále spojena s myomy (nezhoubné nádory) nebo zábranou 
+                                odtoku menstruační krve. Je potřeba návštěva gynekologa, který by měl provést 
+                                ultrazvukové vyšetření pro určení příčiny. Mohou být nasazeny léky proti 
+                                bolesti nebo proti křečím. Případně jsou chirurgicky odstraněny myomy či srůsty. 
+                                Mezi další doporučované metody zmírnění následků dysmenorey patří používání čajů 
+                                např. s kontryhelem, cvičení  a celkový klid a dostatek spánku.
+                            </p>
+                            <p>Nasazení perorální antikoncepce může napomoci potlačit příznaky dysmenorey. Ovšem u 
+                                velmi mladých dívek může být narušena hormonální rovnováha, může dojít ke komplikacím 
+                                v dalších oblastech jako kardiovaskulární atd. Dále je nutno mít na paměti, že je 
+                                po dobu používání perorální antikoncepce zastavena ovulace ženy, což může mít následně 
+                                následky v obtížích s otěhotněním.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./img/pexels-cottonbro-studio-6542724.jpg" alt="paní v bolestech opřená nohama o zeť">
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h3>Premenstruační syndrom (PMS)</h3>
+                            <p>Nastává zhruba týden před menses. Projevuje se silnými výkyvy nálad, únavou, bolestí 
+                                břicha, bolestí hlavy. Často se tak děje v důsledku nedostatku železa v těle. 
+                                Neléčí se. Je nutno doporučit klid, odpočinek, spánek, vyváženou stravu s dostatkem 
+                                železa, bylinní čaje pro ženy.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Endometriosa</h3>
+                            <p>Projevuje se u žen v reprodukčním věku. Projevuje se velmi silnými bolestmi v podbřišku, 
+                                kdy buňky sliznice děložní dutiny se nacházejí vně dutiny děložní a reagují v rámci 
+                                cyklu na hladiny pohlavních hormonů, což vede k bolestem, krvácení nebo zánětům. 
+                                Zásadní projev této nemoci kromě velkých bolestí je neschopnost ženy otěhotnět, 
+                                případně to vede na mimoděložní otěhotnění či se objevuje krev moči nebo stolici. 
+                                Je potřeba návštěva gynekologa, kdy náročnou operací odstraní ložiska endometrické 
+                                tkáně mimo dělohu. Dále jsou podávány léky na zmírnění bolesti a hormonální přípravky.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./img/pexels-polina-zimmerman-3958577.jpg" alt="paní schoulená na křesle">
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h3>Nepravidelná menses</h3>
+                            <p>Může se u ženy projevit kdykoli v průběhu reprodukčního života. Za relativně 
+                                normální se považuje první 2 roky po menarché. Poté po 15 roce života ženy 
+                                nebo kdykoli v reprodukčním období po uplynutí více jak 3 měsíců nastává 
+                                tzv. Amorea. Vždy se vylučuje těhotenství a další organické poruchy 
+                                (endometria). Menopausa (přechod) nastává obvykle až mezi 49 a 51 rokem. 
+                                Nepravidelná menses nastává v důsledku hormonální nerovnováhy (hlavně 
+                                estrogenu a progesteronu), také v důsledku silného nebo dlouhodobého stresu 
+                                nebo změn antikoncepce, anorexie či jako následek endometriózy. Doporučuje 
+                                se psychologická konzultace, odstranění stresu, úprava jídelníčku a případně 
+                                hormonální doplňky stravy dle doporučení lékaře. Při prodloužení cyklu nad 
+                                35 dní se menses projeví silnějším krvácením. Při krátkém cyklu pod 22 dní 
+                                může vést k anémii. Za silní krvácení se považuje více jak 5 vložek za den, 
+                                za slabé krvácení se považují 2 vložky za den.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Vaginální mykóza</h3>
+                            <p>Je olestivé onemocnění spojení s výtoky, které je způsobené kvasinkou Candida 
+                                Albicans. Může k němu dojít kdykoli v životě ženy (i u malých holčiček nebo 
+                                u žen po přechodu). Kvasinka se rychle v těle přemnoží po oslabení organismu 
+                                nebo po braní antibiotik, nebo po špatné hygieně, nebo po nošení spodního 
+                                prádla z umělých materiálů nebo po velkém přísunu cukru ze sladkostí (jídlo 
+                                nebo pití). Je potřeba návštěva lékaře, který předepíše speciální léky.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./img/pexels-andrea-piacquadio-3807733.jpg" alt="žena sedící na posteli">
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h3>Zánět vaječníků</h3>
+                            <p>Je bolestivé infekční onemocnění, postihující dělohu, vejcovody, vaječníky, 
+                                případně pobřišnici, způsobené bakteriemi Chlamydia trachomatis. Je velmi 
+                                nebezpečné. Přenáší se hlavně pohlavním stykem, ale žena k nimi může přijít 
+                                i na špinavé toaletě, v sauně nebo v bazénu. Projevuje se zejména svěděním 
+                                a výtoky, puchýřky na genitáliích, slabými krvácením a bolestí. Je potřeba 
+                                navštívit gynekologa, který provede laboratorní vyšetření na určení bakterie 
+                                a navrhne optimální léčbu. Může vést k neplodnosti. Prevencí je partnerská věrnost 
+                                a používání kondomu a dostatečná hygiena.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Herpes</h3>
+                            <p>Je onemocnění, způsobené virem Herpes simplex 2. Je velmi infekční. Dochází 
+                                k němu při nechráněném pohlavním styku s infikovaným partnerem. Projevuje se 
+                                svěděním a puchýřky na genitáliích. Může se opakovat. Léčba je obtížná.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./img/pexels-polina-zimmerman-3958584.jpg" alt="žena sedící na okně">
+                </div>
+                <div>
+                    <div>
+                        <h3>Rakovina děložního čípku</h3>
+                        <p>Je infekční onemocnění, způsobené Papilomavirem, v důsledku střídání partnerů, špatné 
+                            hygieny, oslabené imunity nebo kouření. V ČR je infikováno přibližně 20 % žen. Je 
+                            potřeba navštívit gynekologa, který provede laboratorní vyšetření na určení viru a 
+                            navrhne optimální léčbu. Prevencí je partnerská věrnost, používání kondomu a dobrá 
+                            hygiena.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Rakovina prsu</h3>
+                        <p>Je nádorové onemocnění, kdy se v prsu může objevit bulka, kůže se stahuje dovnitř nebo 
+                            mění vnější strukturu (pomerančovití). Zprvu se nijak neprojevuje, pak je prs 
+                            bolestivý. Zpravidla je výskyt vázán na rodinnou anamnézu, kdy se již v rodině podobné 
+                            onemocnění vyskytlo. Dále jsou rizikovými faktory, kouření, pití alkoholu, obezita, 
+                            špatná fyzická aktivita, věk nad 45 let. Naopak prevencí je dobrá životospráva, pohyb, 
+                            život bez stresu a kojení.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Neplodnost</h3>
+                        <p>Počítá se po roce od okamžiku, kdy se partneři snažili o otěhotnění. Může být způsobeno 
+                            anatomickými anomáliemi, častými infekcemi, záněty, poruchami ovulace v důsledku 
+                            hormonální nerovnováhy, věkem ženy nad 35 let.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
+            <nav>
+                <li><a href="./index.html">Domů</a></li>
+                <li><a href="./gallery.html">Na slovíčko</a></li>
+                <li><a href="./kontakt.html">O mně</a></li>
+            </nav>
+            <div>
+                <p>Profil mé RP</p>
+                <a href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
+            </div>
+        </div>
+        <div>
+            <p>© Vendula Pelantová, 2023</p>
+        </div>
+    </footer>
+    <script src="./lightGallery/dist/lightgallery.min.js"></script>
+    <script>
+        lightGallery(document.getElementById('my-galerie'), {
+        selector: '.galerie__fotka > a',
+    });
+    </script>
 </body>
 </html>
