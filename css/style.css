@@ -1,7 +1,191 @@
 :root{
-    --hover: #C837AB;
+    --hov: #C837AB;
     --text: #000000;
-    --bg-foot:linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #DE7A88;
+    --bg-foot:rgba(201, 117, 129, 1);
     --bg-pomucky: rgba(222, 122, 136, 0.45);
+    --txbox:#ffffff;
 
+}
+html{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+h1, h2, h3, h4{
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+a:hover{
+    color: var(--hov);
+    text-decoration: underline;
+}
+header{
+    margin: 0 auto;
+}
+.cesta{
+    margin: 0 1em 1em;
+}
+.cesta__domu::before{
+    content: url(../ico/ico-domu.svg);
+    margin-right: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.cesta__lok::before{
+    content: url(../ico/ico-puntik.svg);
+    margin: 0.5em;
+    vertical-align: bottom;
+    display: inline-block;
+}
+h1{
+    font-weight: 700;
+    font-size: 27px;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-top: 1.5em;
+}
+.img-responsive{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}/*
+.h2--ig::after{
+    content: url(../ico/Insta-nadpis.svg);
+    vertical-align: middle;
+    display: inline-block;
+    border-left: 1em;
+}*/
+.h2--ig a{
+    color: var(--text);
+}
+.h2--ig__obr{
+    vertical-align: middle;
+    display: inline-block;
+}
+.h2--ig__obr:hover{
+    content: url(../ico/Insta-nadpis--hover.svg);
+    vertical-align: middle;
+    display: inline-block;
+}
+.fbox{
+    width: 330px;
+    height: 25em;
+    padding: 1em;
+    background-color: var(--bg-foot);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.fbox__nazev{
+    color: var(--txbox);
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: justify;
+    align-self: center;
+}
+.fbox__text{
+    color: var(--txbox);
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+}
+.dotazy h3{
+    margin: 0 2em;
+}
+.dotazy p{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 1em 2em;
+}
+footer{
+    background-color: var(--bg-foot);
+}
+
+.foot__cop p, .foot__odkazy p, .foot__odkazy a{
+    color: var(--txbox);
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+.foot__odkazy li{
+    list-style: none;
+    text-align: center;
+}
+.ig-foot::before{
+    content: url(../ico/foot-insta.svg);
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 0.5em;
+}
+.foot__cop{
+    border-top: 2px solid var(--txbox);
+    margin: 0 1em;
+}
+
+
+.kontakt__ja, .kontakt__skola{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kontakt{
+    margin-bottom: 2em;
+}
+.ig::before{
+    content: url(../ico/ico-insta-kontakt.svg);
+}
+.pc::before{
+    content: url(../ico/ico-pc-kontakt.svg);
+}
+.mail::before{
+    content: url(../ico/ico-mail-kontakt.svg);
+}
+.ig::before, .pc::before, .mail::before{
+    margin-right: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.ig, .pc, .mail{
+    color: var(--text);
+}
+.pomucky{
+    background-color: var(--bg-pomucky);
+    padding: 1em 0;
+}
+
+.pbox{
+    width: 304px;
+    height: 350px;
+    background-color: var(--txbox);
+    box-shadow:  0px 0px 25px #D2E7EF;
+    border-radius: 8px;
+    padding: 1em;
+}
+.pbox__nazev{
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: left;
+    margin: 1em;
+}
+.pbox__text{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
 }

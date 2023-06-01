@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobil.css">
     <script src="./hamburger.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Žena cyklu</title>
     <link rel="icon" type="image/x-icon" href="./ico/Favicon.svg">
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
+    <header class="hlava">
+        <a class="hlava__logo" href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
         <nav>
             <div class="navbar">
                 <div class="container nav-container">
@@ -29,14 +35,14 @@
                         <li><a href="./index.html" class="selected">Úvod</a></li>
                         <li><a href="./gallery.html">Na slovíčko</a></li>
                         <li><a href="./kontakt.html">O mně</a></li>
-                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/nav-insta.svg"></a></li>
+                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/openmoji_instagram.png"></a></li>
                 </menu>
             </div>
           </nav>
     </header>
     <main>
         <section>
-            <h1>Ženská cykličnost</h1>
+            <h1 class="title">Ženská cykličnost</h1>
             <div>
                 <p>Naše evropská civilizace je mužsky orientovaná na výkony, 
                     produktivitu a výsledky. Obecně se traduje, že „to“ přece všechny ženy 
@@ -55,7 +61,7 @@
                     vyplývá z přírody, proto je nutné se s ní naučit pracovat, a ne ji do nekonečna tabuizovat.
                 </p>
             </div>
-            <img src="./img/f5285524bad54.png" alt="žena s dělohou">
+            <img class="img-responsive" src="./img/f5285524bad54.png" alt="žena s dělohou">
             <div>
                 <p>Pojem cyklická žena zavedla ve své knize M. Gray. Podle ní má žena v sobě hned 
                     několik cyklů – podle Měsíce, ročního období, životní fáze atd. Změny (fáze) jsou 
@@ -72,56 +78,58 @@
         </section>
         <section>
             <h2>Fáze cyklu</h2>
-            <div>
-                <h4>Reflektivní fáze</h4>
-                <ul>
-                    <li>1. – 6. den</li>
-                    <li>Spojena s menses</li>
-                    <li>Žena v tu dobu vyhledává samotu, nechce se jí nic dělat, chce spát, je citlivější</li>
-                    <li>Žena by měla konzumovat více potravin, obsahujících železo a vitamíny</li>
-                    <li>Jako silná vlastnost vystupuje intuice</li>
-                    <li>V tuto dobu je vhodné delegovat úlohy na rodinné příslušníky a kolegy</li>
-                    <li>Rozhodně se nedoporučuje realizovat jednání ani žádné pracovní nebo sportovní výkony</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Dynamická fáze</h4>
-                <ul>
-                    <li>7. – 13. den</li>
-                    <li>Spojena s přípravou na ovulaci</li>
-                    <li>Žena v tuto dobu je plná energie, nezávislá, odvážná, sebestředná</li>
-                    <li>Dokáže dobře komunikovat, organizovat, plánovat a řídit úkoly, rychle a efektivně 
-                        se rozhoduje, je fyzicky hodně výkonná</li>
-                    <li>Dobře v tuto dobu funguje paměť, strukturované myšlení</li>
-                    <li>Učení se jde samo</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Expresivní fáze</h4>
-                <ul>
-                    <li>14. – 20. den</li>
-                    <li>Spojena s ovulací</li>
-                    <li>Žena je v tuto dobu komunikativní, společenská, pečující o své okolí, přitažlivá, vnímavá 
-                        a trpělivá</li>
-                    <li>Dokáže vést týmovou komunikaci a vytvářet vztahy</li>
-                    <li>Řeší emočně náročné situace</li>
-                    <li>Atmosféru doma i na pracovišti zklidňuje</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Kreativní fáze</h4>
-                <ul>
-                    <li>21. – 28. den</li>
-                    <li>Spojena s premenstruací</li>
-                    <li>Žena je v tomto období unavenější, kritická a netrpělivá</li> 
-                    <li>Může více jíst či být opuchlá, jak tělo zadržuje vodu</li>
-                    <li>Je schopna dokončovat úkoly, identifikovat problémy a nalézat speciální řešení</li>
-                    <li>V tomto období se nedoporučuje řešit vztahové věci osobní ani pracovní, neboť by to vedlo 
-                        ke konfliktům</li>
-                </ul>
+            <div class="faze">
+                <div class="fbox">
+                    <h4 class="fbox__nazev">Reflektivní fáze</h4>
+                    <ul class="fbox__text">
+                        <li>1. – 6. den</li>
+                        <li>Spojena s menses</li>
+                        <li>Žena v tu dobu vyhledává samotu, nechce se jí nic dělat, chce spát, je citlivější</li>
+                        <li>Žena by měla konzumovat více potravin, obsahujících železo a vitamíny</li>
+                        <li>Jako silná vlastnost vystupuje intuice</li>
+                        <li>V tuto dobu je vhodné delegovat úlohy na rodinné příslušníky a kolegy</li>
+                        <li>Rozhodně se nedoporučuje realizovat jednání ani žádné pracovní nebo sportovní výkony</li>
+                    </ul>
+                </div>
+                <div class="fbox">
+                    <h4 class="fbox__nazev">Dynamická fáze</h4>
+                    <ul class="fbox__text">
+                        <li>7. – 13. den</li>
+                        <li>Spojena s přípravou na ovulaci</li>
+                        <li>Žena v tuto dobu je plná energie, nezávislá, odvážná, sebestředná</li>
+                        <li>Dokáže dobře komunikovat, organizovat, plánovat a řídit úkoly, rychle a efektivně 
+                            se rozhoduje, je fyzicky hodně výkonná</li>
+                        <li>Dobře v tuto dobu funguje paměť, strukturované myšlení</li>
+                        <li>Učení se jde samo</li>
+                    </ul>
+                </div>
+                <div class="fbox">
+                    <h4 class="fbox__nazev">Expresivní fáze</h4>
+                    <ul class="fbox__text">
+                        <li>14. – 20. den</li>
+                        <li>Spojena s ovulací</li>
+                        <li>Žena je v tuto dobu komunikativní, společenská, pečující o své okolí, přitažlivá, vnímavá 
+                            a trpělivá</li>
+                        <li>Dokáže vést týmovou komunikaci a vytvářet vztahy</li>
+                        <li>Řeší emočně náročné situace</li>
+                        <li>Atmosféru doma i na pracovišti zklidňuje</li>
+                    </ul>
+                </div>
+                <div class="fbox">
+                    <h4 class="fbox__nazev">Kreativní fáze</h4>
+                    <ul class="fbox__text">
+                        <li>21. – 28. den</li>
+                        <li>Spojena s premenstruací</li>
+                        <li>Žena je v tomto období unavenější, kritická a netrpělivá</li> 
+                        <li>Může více jíst či být opuchlá, jak tělo zadržuje vodu</li>
+                        <li>Je schopna dokončovat úkoly, identifikovat problémy a nalézat speciální řešení</li>
+                        <li>V tomto období se nedoporučuje řešit vztahové věci osobní ani pracovní, neboť by to vedlo 
+                            ke konfliktům</li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="dotazy">
             <h2>Copak jste chtěli vědět a báli jste se zeptat?</h2>
             <div>
                 <p>Povídání o tomto tématu je citlivé. Na tomto místě nalezněte odpovědi bez stresu, 
@@ -225,8 +233,8 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div>
+    <footer class="foot">
+        <div class="foot__odkazy">
             <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
             <nav>
                 <li><a href="./index.html">Domů</a></li>
@@ -235,10 +243,10 @@
             </nav>
             <div>
                 <p>Profil mé RP</p>
-                <a href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
+                <a class="ig-foot" href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
             </div>
         </div>
-        <div>
+        <div class="foot__cop">
             <p>© Vendula Pelantová, 2023</p>
         </div>
     </footer>

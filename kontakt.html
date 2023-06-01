@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobil.css">
     <script src="./hamburger.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Žena cyklu - kontakt</title>
     <link rel="icon" type="image/x-icon" href="./ico/Favicon.svg">
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
+    <header class="hlava">
+        <a class="hlava__logo" href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
         <nav>
             <div class="navbar">
                 <div class="container nav-container">
@@ -26,22 +32,22 @@
                     </div>
                 </div>   
                 <menu class="menu-items hamburger-nav hamburger-zone">
-                        <li><a href="./index.html" class="selected">Úvod</a></li>
-                        <li><a href="./gallery.html">Na slovíčko</a></li>
-                        <li><a href="./kontakt.html">O mně</a></li>
-                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/nav-insta.svg" alt="instagram"></a></li>
+                        <li><a href="./index.html">Úvod</a></li>
+                        <li><a href="./gallery.html" >Na slovíčko</a></li>
+                        <li><a href="./kontakt.html"¨class="selected">O mně</a></li>
+                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/openmoji_instagram.png"></a></li>
                 </menu>
             </div>
           </nav>
     </header>
     <main>
         <h1>Kdo a co za tím stojí?</h1>
-        <div>
-            <a href="./index.html">Domů</a>
-            <a href="./kontakt.html">O mně</a>
+        <div class="cesta">
+            <a class="cesta__domu" href="./index.html">Domů</a>
+            <a class="cesta__lok" href="./kontakt.html">O mně</a>
         </div>
         <section>
-            <img src="./img/IMG_721-VP.jpg" alt="Vendula Pelantová">
+            <img class="img-responsive" src="./img/IMG_721-VP.jpg" alt="Vendula Pelantová">
             <div>
                 <div>
                     <p>Ahoj, tak tohle jsem já - Vendy - Vendula Pelantová.</p>
@@ -71,7 +77,7 @@
             </div>
         </section>
         <section>
-            <h2>Moje RP a <a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/Insta-nadpis.svg" alt="instagram"></a></h2>
+            <h2 class="h2--ig"><a href="https://www.instagram.com/zenacyklu/" target="_blank">Moje RP a <img class="h2--ig__obr" src="./ico/Insta-nadpis.svg"></a></h2>
             <p>Čtete dobře, součástí mé ročníkové práce je osvětový instagramový profil 
                 <a href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
             </p>
@@ -79,21 +85,21 @@
         </section>
         <section>
             <h2>Kontakt, aneb kde mě ještě najdeš?</h2>
-            <address>
-                <div>
-                    <a href="mailto:vendula.pelantov.020@pslib.cz" target="_blank">vendula.pelantov.020@pslib.cz</a>
-                    <a href = "https://www.instagram.com/_vendyp_/" target="_blank">@_vendyp_</a>
+            <address class="kontakt" >
+                <div class="kontakt__ja">
+                    <a class="mail" href="mailto:vendula.pelantov.020@pslib.cz" target="_blank">vendula.pelantov.020@pslib.cz</a>
+                    <a class="ig" href = "https://www.instagram.com/_vendyp_/" target="_blank">@_vendyp_</a>
                 </div>
-                <div>
-                    <a href="https://pslib.cz/" target="_blank">pslib.cz</a>
-                    <a href="https://www.instagram.com/pslib_official/" target="_blank">@pslib_official</a>
-                    <a href="https://www.instagram.com/elprumka/" target="_blank">@elprumka</a>
+                <div class="kontakt__skola">
+                    <a class="pc" href="https://pslib.cz/" target="_blank">pslib.cz</a>
+                    <a class="ig" href="https://www.instagram.com/pslib_official/" target="_blank">@pslib_official</a>
+                    <a class="ig" href="https://www.instagram.com/elprumka/" target="_blank">@elprumka</a>
                 </div>
             </address>
         </section>
     </main>
-    <footer>
-        <div>
+    <footer class="foot">
+        <div class="foot__odkazy">
             <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
             <nav>
                 <li><a href="./index.html">Domů</a></li>
@@ -102,10 +108,10 @@
             </nav>
             <div>
                 <p>Profil mé RP</p>
-                <a href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
+                <a class="ig-foot" href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
             </div>
         </div>
-        <div>
+        <div class="foot__cop">
             <p>© Vendula Pelantová, 2023</p>
         </div>
     </footer>

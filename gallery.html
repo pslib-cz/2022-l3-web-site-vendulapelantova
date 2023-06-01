@@ -8,13 +8,52 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobil.css">
     <script src="./hamburger.js"></script>
+    <script src="./slider.js"></script>
     <link rel="stylesheet" href="./lightGallery/dist/css/lightgallery-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Žena cyklu - Na slovíčko</title>
     <link rel="icon" type="image/x-icon" href="./ico/Favicon.svg">
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      
+        const swiper = new Swiper(".swiper", {
+          loop: true,
+          effect: "cube",
+          autoplay: {
+            delay: 5000,
+            pauseOnMouseEnter: true,
+          },
+          keyboard: {
+              enabled: true,
+              onlyInViewport: false,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet dot",
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+          }
+        });
+        dokument.querySelector("#next-slide").onclick = () => swiper.slideNext();
+      </script>
+      <script src="./slider.js"></script>
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
+    <header class="hlava">
+        <a class="hlava__logo" href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
         <nav>
             <div class="navbar">
                 <div class="container nav-container">
@@ -27,19 +66,19 @@
                     </div>
                 </div>   
                 <menu class="menu-items hamburger-nav hamburger-zone">
-                        <li><a href="./index.html" class="selected">Úvod</a></li>
-                        <li><a href="./gallery.html">Na slovíčko</a></li>
+                        <li><a href="./index.html">Úvod</a></li>
+                        <li><a href="./gallery.html" class="selected">Na slovíčko</a></li>
                         <li><a href="./kontakt.html">O mně</a></li>
-                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/nav-insta.svg"></a></li>
+                        <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/openmoji_instagram.png"></a></li>
                 </menu>
             </div>
           </nav>
     </header>
     <main>
         <h1>Na slovíčko</h1>
-        <div>
-            <a href="./index.html">Domů</a>
-            <a href="./gallery.html">Na slovíčko</a>
+        <div class="cesta">
+            <a class="cesta__domu" href="./index.html">Domů</a>
+            <a class="cesta__lok" href="./gallery.html">Na slovíčko</a>
         </div>
         <p>Informace a rady, které by se Ti mohly někdy hodit. </p>
         <section>
@@ -53,7 +92,7 @@
                 den své nálady, pocity, výkonnost, družnost apod.
             </p>
         </section>
-        <section>
+        <section class="pomucky">
             <h2>Menstruační pomůcky</h2>
             <div>
                 <p>Menstruační pomůcky, každá je běžně používá, ale známe všechny možné alternativy?</p>
@@ -62,71 +101,91 @@
                     otázka ceny?
                 </p>
             </div>
-            <div>
-                <div>
-                    <h4>Jednorázové vložky</h4>
-                    <ul>
-                        <li>nejčastěji používané</li>
-                        <li>lepí se do kalhotek</li>
-                        <li>mnoho variant a značek</li>
-                        <li><ul>dělí se: klasické a z bio bavlny
-                            <li>klasické - liší se množstvím chem. látek</li>
-                            <li>bio bavlněné - měkčí, méně se zapařují a méně zapáchají</li></ul></li>
-                        <li>neekologické</li>
-                    </ul>
+            <div class="swiper">
+                <div class="slider__content swiper-wrapper">
+                    <div class="pbox slider__item swiper-slide">
+                        <div class="slider-view slider-view__front">
+                            <h4 class="pbox__nazev">Jednorázové vložky</h4>
+                            <ul class="pbox__text">
+                                <li>nejčastěji používané</li>
+                                <li>lepí se do kalhotek</li>
+                                <li>mnoho variant a značek</li>
+                                <li>dělí se: klasické a z bio bavlny<ul>
+                                    <li>klasické - liší se množstvím chem. látek</li>
+                                    <li>bio bavlněné - měkčí, méně se zapařují a méně zapáchají</li></ul></li>
+                                <li>neekologické</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pbox slider__item swiper-slide">
+                        <div class="slider-view slider-view__front">
+                            <h4 class="pbox__nazev">Látkové vložky</h4>
+                            <ul class="pbox__text">
+                                <li>zapínají se okolo kalhotek</li>
+                                <li>mnoho variant a barev</li>
+                                <li>hůře k sehnání</li>
+                                <li>ekologické - po použití se normálně vyperou</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pbox slider__item swiper-slide">
+                        <div class="slider-view slider-view__front">
+                            <h4 class="pbox__nazev">Menstruační kalhotky</h4>
+                            <ul class="pbox__text">
+                                <li>v posledních letech se staly trendem</li>
+                                <li>používají se jako běžné kalhotky</li>
+                                <li>mnoho variant a značek</li>
+                                <li>složitější výměna</li>
+                                <li>dražší, ale vydrží i několik let</li>
+                                <li>ekologické - po použití se normálně vyperou</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pbox slider__item swiper-slide">
+                        <div class="slider-view slider-view__front">
+                            <h4 class="pbox__nazev">Tampony</h4>
+                            <ul class="pbox__text">
+                                <li>nejčastěji používané</li>
+                                <li>zavádí se do pochvy</li>
+                                <li>mnoho variant a značek</li>
+                                <li>při delším používání mohou způsobovat pocit suchosti a bolesti</li>
+                                <li>pozor na syndrom toxického šoku</li>
+                                <li>často využívané při sportu či cestování</li>
+                                <li>neekologické</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pbox slider__item swiper-slide">
+                        <div class="slider-view slider-view__front">
+                            <h4 class="pbox__nazev">Menstruační kalíšek</h4>
+                            <ul class="pbox__text">
+                                <li>zavádí se do pochvy</li>
+                                <li>mnoho variant a značek</li>
+                                <li>nemusí vyhovovat zejména mladším slečnám</li>
+                                <li>dražší, ale vydrží několik let</li>
+                                <li>ekologický - po použití se normálně vypláchne</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pbox slider__item swiper-slide">
+                        <div class="slider-view slider-view__front">
+                            <h4 class="pbox__nazev">Menstruační houba</h4>
+                            <ul class="pbox__text">
+                                <li>zavádí se hlouběji do pochvy</li>
+                                <li>snadno přizpůsobitelná velikost</li>
+                                <li>díky horšímu čištění může začít zapáchat</li>
+                                <li>ekologická - po použití se normálně vypláchne</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4>Látkové vložky</h4>
-                    <ul>
-                        <li>zapínají se okolo kalhotek</li>
-                        <li>mnoho variant a barev</li>
-                        <li>hůře k sehnání</li>
-                        <li>ekologické - po použití se normálně vyperou</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Menstruační kalhotky</h4>
-                    <ul>
-                        <li>v posledních letech se staly trendem</li>
-                        <li>používají se jako běžné kalhotky</li>
-                        <li>mnoho variant a značek</li>
-                        <li>složitější výměna</li>
-                        <li>dražší, ale vydrží i několik let</li>
-                        <li>ekologické - po použití se normálně vyperou</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Tampony</h4>
-                    <ul>
-                        <li>nejčastěji používané</li>
-                        <li>zavádí se do pochvy</li>
-                        <li>mnoho variant a značek</li>
-                        <li>při delším používání mohou způsobovat pocit suchosti a bolesti</li>
-                        <li>pozor na syndrom toxického šoku</li>
-                        <li>často využívané při sportu či cestování</li>
-                        <li>neekologické</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Menstruační kalíšek</h4>
-                    <ul>
-                        <li>zavádí se do pochvy</li>
-                        <li>mnoho variant a značek</li>
-                        <li>nemusí vyhovovat zejména mladším slečnám</li>
-                        <li>dražší, ale vydrží několik let</li>
-                        <li>ekologický - po použití se normálně vypláchne</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Menstruační houba</h4>
-                    <ul>
-                        <li>zavádí se hlouběji do pochvy</li>
-                        <li>snadno přizpůsobitelná velikost</li>
-                        <li>díky horšímu čištění může začít zapáchat</li>
-                        <li>ekologická - po použití se normálně vypláchne</li>
-                    </ul>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
             </div>
+            
+        
             <div class="galerie" id="my-galerie">
                 <figure class="galerie__fotka">
                     <a href="./img/full/pexels-karolina-grabowska-7692272.jpg">
@@ -198,7 +257,7 @@
                             </p>
                         </div>
                     </div>
-                    <img src="./img/pexels-cottonbro-studio-6542724.jpg" alt="paní v bolestech opřená nohama o zeť">
+                    <img class="img-responsive" src="./img/pexels-cottonbro-studio-6542724.jpg" alt="paní v bolestech opřená nohama o zeť">
                 </div>
                 <div>
                     <div>
@@ -222,7 +281,7 @@
                             </p>
                         </div>
                     </div>
-                    <img src="./img/pexels-polina-zimmerman-3958577.jpg" alt="paní schoulená na křesle">
+                    <img class="img-responsive" src="./img/pexels-polina-zimmerman-3958577.jpg" alt="paní schoulená na křesle">
                 </div>
                 <div>
                     <div>
@@ -254,7 +313,7 @@
                             </p>
                         </div>
                     </div>
-                    <img src="./img/pexels-andrea-piacquadio-3807733.jpg" alt="žena sedící na posteli">
+                    <img class="img-responsive" src="./img/pexels-andrea-piacquadio-3807733.jpg" alt="žena sedící na posteli">
                 </div>
                 <div>
                     <div>
@@ -278,7 +337,7 @@
                             </p>
                         </div>
                     </div>
-                    <img src="./img/pexels-polina-zimmerman-3958584.jpg" alt="žena sedící na okně">
+                    <img class="img-responsive" src="./img/pexels-polina-zimmerman-3958584.jpg" alt="žena sedící na okně">
                 </div>
                 <div>
                     <div>
@@ -311,8 +370,8 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div>
+    <footer class="foot">
+        <div class="foot__odkazy">
             <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
             <nav>
                 <li><a href="./index.html">Domů</a></li>
@@ -321,10 +380,10 @@
             </nav>
             <div>
                 <p>Profil mé RP</p>
-                <a href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
+                <a class="ig-foot" href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
             </div>
         </div>
-        <div>
+        <div class="foot__cop">
             <p>© Vendula Pelantová, 2023</p>
         </div>
     </footer>
