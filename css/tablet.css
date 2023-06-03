@@ -13,9 +13,7 @@
     justify-content: center;
     margin: 3em 0;
 }
-.container{
-    margin: 0;
-}
+.container{ margin: 0;}
 .hamburger-nav{transform: none;}
 .hamburger-nav ul {
     display: flex;
@@ -28,37 +26,23 @@
 }
 
 
-.title{
-    text-align: center;
-}
-.in__text{
-    text-align: justify;
-}
-.galerie {
-    grid-template-columns: repeat(3, 1fr);
-}
-img{
-    max-width: fit-content;
-}
+.title{text-align: center;}
+.in__text{text-align: justify;}
+.galerie {grid-template-columns: repeat(3, 1fr);}
+img{max-width: fit-content;}
 .faze{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-items: center;
 }
-.dotazy__box p, .dotazy__box h3{
-    text-align: justify;
-}
+.dotazy__box p, .dotazy__box h3{text-align: justify;}
 .ich{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.ich__box{
-    order: 1;
-}
-.ich__box p{
-    text-align: justify;
-}
+.ich__box{order: 1;}
+.ich__box p{text-align: justify;}
 .ich__obr{
     min-width: 20em;
     max-width: 45em;
@@ -79,22 +63,19 @@ img{
     border-right: 2px solid var(--hov);
     padding-right: 2em;
 }
-.kontakt__ja, .kontakt__skola{
-    align-items: flex-start;
-}
+.kontakt__ja, .kontakt__skola{align-items: flex-start;}
+.uvod{text-align: justify;}
 .nem__obr{
     max-height: 50em;
     margin: 0 auto;
 }
 .nem p{
-    text-align: justify;
     margin-left: 1.5em;
     margin-right: 1.5em;
 }
+.nem__box p{text-align: justify;}
 /*FOOT*/
-.foot__cop{
-    border-top: none;
-}
+.foot__cop{border-top: none;}
 .foot__odkazy{
     margin: 2em 1.5em 1em;
     padding: 0 2em 1em;
@@ -103,9 +84,5 @@ img{
     flex-direction: row;
     align-items: center;
 }
-.foot{
-    align-items: stretch;
-}
-.ig-foot::before{
-    padding-right: 0;
-}
+.foot{align-items: stretch;}
+.ig-foot::before{padding-right: 0;}

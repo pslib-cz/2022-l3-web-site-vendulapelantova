@@ -7,28 +7,32 @@ main{
     flex-direction: row;
     flex-wrap: nowrap;
 }
-.in__foto{
-    max-width: 30em;
-}
-.faze{
-    grid-template-columns: repeat(4,1fr);
-}
+.in__foto{ max-width: 30em;}
+.faze{grid-template-columns: repeat(4,1fr);}
 .swiper{
     margin-right: 2em;
     margin-left: 2em;
 }
-.galerie{
-    grid-template-columns: repeat(6, 1fr);
-}
-.nem{
-    gap: 5em;
-}
+.galerie{grid-template-columns: repeat(6, 1fr);}
+.nem{gap: 5em;}
 .nem__box{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
 }
-.nem__obr{
-    max-width: 30em;
+.nem__box--konec{flex-direction: column;}
+.nem__obr{max-width: 30em;}
+.title{font-size: 3em;}
+h2{
+    font-size: 2em;
+    margin-top: 2em;
 }
+.foot{margin-top: 3em;}
+.kalendar p{text-align: justify;}
+.pomucky h2{margin-top: 1em;}
+.swiper{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+.galerie{margin-bottom: 3em;}
