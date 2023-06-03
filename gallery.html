@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobil.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="only screen and (min-width: 768px)">
+    <link rel="stylesheet" href="./css/pc.css" media="only screen and (min-width: 1281px)">
     <script src="./hamburger.js"></script>
     <script src="./slider.js"></script>
     <link rel="stylesheet" href="./lightGallery/dist/css/lightgallery-bundle.min.css">
@@ -23,9 +25,9 @@
       
         const swiper = new Swiper(".swiper", {
           loop: true,
-          effect: "cube",
+          effect: "slide",
           autoplay: {
-            delay: 5000,
+            delay: 2000,
             pauseOnMouseEnter: true,
           },
           keyboard: {
@@ -43,9 +45,25 @@
             bulletClass: "swiper-pagination-bullet dot",
           },
           scrollbar: {
-            el: '.swiper-scrollbar',
+            //el: '.swiper-scrollbar',
+            el: null,
             draggable: true,
-          }
+          },
+
+          breakpoints: {
+            // when window width is >= 480px
+            600: {
+            slidesPerView: 2,
+            spaceBetween: 5
+            },
+            // when window width is >= 640px
+            900: {
+            slidesPerView: 3,
+            spaceBetween: 5
+            },
+
+        }
+        
         });
         dokument.querySelector("#next-slide").onclick = () => swiper.slideNext();
       </script>
@@ -66,9 +84,9 @@
                     </div>
                 </div>   
                 <menu class="menu-items hamburger-nav hamburger-zone">
-                        <li><a href="./index.html">Úvod</a></li>
-                        <li><a href="./gallery.html" class="selected">Na slovíčko</a></li>
-                        <li><a href="./kontakt.html">O mně</a></li>
+                        <li><a href="./index.html">ÚVOD</a></li>
+                        <li><a href="./gallery.html" class="selected">NA&nbsp;SLOVÍČKO</a></li>
+                        <li><a href="./kontakt.html">O&nbsp;MNĚ</a></li>
                         <li><a href="https://www.instagram.com/zenacyklu/" target="_blank"><img src="./ico/openmoji_instagram.png"></a></li>
                 </menu>
             </div>
@@ -103,79 +121,91 @@
             </div>
             <div class="swiper">
                 <div class="slider__content swiper-wrapper">
-                    <div class="pbox slider__item swiper-slide">
+                    <div class="slider__item swiper-slide">
                         <div class="slider-view slider-view__front">
-                            <h4 class="pbox__nazev">Jednorázové vložky</h4>
-                            <ul class="pbox__text">
-                                <li>nejčastěji používané</li>
-                                <li>lepí se do kalhotek</li>
-                                <li>mnoho variant a značek</li>
-                                <li>dělí se: klasické a z bio bavlny<ul>
-                                    <li>klasické - liší se množstvím chem. látek</li>
-                                    <li>bio bavlněné - měkčí, méně se zapařují a méně zapáchají</li></ul></li>
-                                <li>neekologické</li>
-                            </ul>
+                            <div class="pbox"><!--tato trida se musi presunout sem z slider__content-->
+                                <h4 class="pbox__nazev">Jednorázové vložky</h4>
+                                <ul class="pbox__text">
+                                    <li>nejčastěji používané</li>
+                                    <li>lepí se do kalhotek</li>
+                                    <li>mnoho variant a značek</li>
+                                    <li>dělí se: klasické a z bio bavlny<ul>
+                                        <li>klasické - liší se množstvím chem. látek</li>
+                                        <li>bio bavlněné - měkčí, méně se zapařují a méně zapáchají</li></ul></li>
+                                    <li>neekologické</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="pbox slider__item swiper-slide">
+                    <div class="slider__item swiper-slide">
                         <div class="slider-view slider-view__front">
-                            <h4 class="pbox__nazev">Látkové vložky</h4>
-                            <ul class="pbox__text">
-                                <li>zapínají se okolo kalhotek</li>
-                                <li>mnoho variant a barev</li>
-                                <li>hůře k sehnání</li>
-                                <li>ekologické - po použití se normálně vyperou</li>
-                            </ul>
+                            <div class="pbox">
+                                <h4 class="pbox__nazev">Látkové vložky</h4>
+                                <ul class="pbox__text">
+                                    <li>zapínají se okolo kalhotek</li>
+                                    <li>mnoho variant a barev</li>
+                                    <li>hůře k sehnání</li>
+                                    <li>ekologické - po použití se normálně vyperou</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="pbox slider__item swiper-slide">
+                    <div class="slider__item swiper-slide">
                         <div class="slider-view slider-view__front">
-                            <h4 class="pbox__nazev">Menstruační kalhotky</h4>
-                            <ul class="pbox__text">
-                                <li>v posledních letech se staly trendem</li>
-                                <li>používají se jako běžné kalhotky</li>
-                                <li>mnoho variant a značek</li>
-                                <li>složitější výměna</li>
-                                <li>dražší, ale vydrží i několik let</li>
-                                <li>ekologické - po použití se normálně vyperou</li>
-                            </ul>
+                            <div class="pbox">
+                                <h4 class="pbox__nazev">Menstruační kalhotky</h4>
+                                <ul class="pbox__text">
+                                    <li>v posledních letech se staly trendem</li>
+                                    <li>používají se jako běžné kalhotky</li>
+                                    <li>mnoho variant a značek</li>
+                                    <li>složitější výměna</li>
+                                    <li>dražší, ale vydrží i několik let</li>
+                                    <li>ekologické - po použití se normálně vyperou</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="pbox slider__item swiper-slide">
+                    <div class="slider__item swiper-slide">
                         <div class="slider-view slider-view__front">
-                            <h4 class="pbox__nazev">Tampony</h4>
-                            <ul class="pbox__text">
-                                <li>nejčastěji používané</li>
-                                <li>zavádí se do pochvy</li>
-                                <li>mnoho variant a značek</li>
-                                <li>při delším používání mohou způsobovat pocit suchosti a bolesti</li>
-                                <li>pozor na syndrom toxického šoku</li>
-                                <li>často využívané při sportu či cestování</li>
-                                <li>neekologické</li>
-                            </ul>
+                            <div class="pbox">
+                                <h4 class="pbox__nazev">Tampony</h4>
+                                <ul class="pbox__text">
+                                    <li>nejčastěji používané</li>
+                                    <li>zavádí se do pochvy</li>
+                                    <li>mnoho variant a značek</li>
+                                    <li>při delším používání mohou způsobovat pocit suchosti a bolesti</li>
+                                    <li>pozor na syndrom toxického šoku</li>
+                                    <li>často využívané při sportu či cestování</li>
+                                    <li>neekologické</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="pbox slider__item swiper-slide">
+                    <div class="slider__item swiper-slide">
                         <div class="slider-view slider-view__front">
-                            <h4 class="pbox__nazev">Menstruační kalíšek</h4>
-                            <ul class="pbox__text">
-                                <li>zavádí se do pochvy</li>
-                                <li>mnoho variant a značek</li>
-                                <li>nemusí vyhovovat zejména mladším slečnám</li>
-                                <li>dražší, ale vydrží několik let</li>
-                                <li>ekologický - po použití se normálně vypláchne</li>
-                            </ul>
+                            <div class="pbox">
+                                <h4 class="pbox__nazev">Menstruační kalíšek</h4>
+                                <ul class="pbox__text">
+                                    <li>zavádí se do pochvy</li>
+                                    <li>mnoho variant a značek</li>
+                                    <li>nemusí vyhovovat zejména mladším slečnám</li>
+                                    <li>dražší, ale vydrží několik let</li>
+                                    <li>ekologický - po použití se normálně vypláchne</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="pbox slider__item swiper-slide">
+                    <div class="slider__item swiper-slide">
                         <div class="slider-view slider-view__front">
-                            <h4 class="pbox__nazev">Menstruační houba</h4>
-                            <ul class="pbox__text">
-                                <li>zavádí se hlouběji do pochvy</li>
-                                <li>snadno přizpůsobitelná velikost</li>
-                                <li>díky horšímu čištění může začít zapáchat</li>
-                                <li>ekologická - po použití se normálně vypláchne</li>
-                            </ul>
+                            <div class="pbox">
+                                <h4 class="pbox__nazev">Menstruační houba</h4>
+                                <ul class="pbox__text">
+                                    <li>zavádí se hlouběji do pochvy</li>
+                                    <li>snadno přizpůsobitelná velikost</li>
+                                    <li>díky horšímu čištění může začít zapáchat</li>
+                                    <li>ekologická - po použití se normálně vypláchne</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -219,11 +249,11 @@
                 </figure>
             </div>
         </section>
-        <section>
+        <section class="nem">
             <h2>Nemoci cyklu</h2>
             <p>Onemocnění spojených s ženským cyklem je celá řada. Zde jsou hlavní z nich.</p>
             <div>
-                <div>
+                <div class="nem__box">
                     <div>
                         <div>
                             <h3>Syndrom toxického šoku</h3>
@@ -231,49 +261,49 @@
                                 jedinec. Zejména mezi mládeží přitom o tomto stavu není mnoho povědomí a mnozí 
                                 tak žijí “na plný plyn”. Onemocnění je způsobeno bakteriemi Stafilokoky. Postihuje 
                                 hlavně ženy do 30 let, ale ohroženi jsou všichni. Onemocnění se projevuje 
-                                zažívacími problémy, prudkým vzrůstem tělesné teploty nad 38,9 °C, poklesem krevního 
+                                zažívacími problémy, prudkým vzrůstem tělesné teploty nad 38,9&nbsp;°C, poklesem krevního 
                                 tlaku, bolestí svalů, překrvením sliznic, okupováním kůže apod. Je nutné okamžitě 
-                                přivolat lékaře. Původní příčinou souvisí s používáním tamponů. Prevencí je řádná 
+                                přivolat lékaře. Původní příčinou souvisí s&nbsp;používáním tamponů. Prevencí je řádná 
                                 hygiena a častá výměna hygienických pomůcek.
                             </p>
                         </div>
                         <div>
                             <h3>Dysmenorea</h3>
                             <p>Nastává buď po menarché nebo až po několika klidných letech. Projevuje se bolestivou 
-                                menstruací, silnými křečemi, bolestí hlavy, nevolností zejména v prvních dvou dnech 
+                                menstruací, silnými křečemi, bolestí hlavy, nevolností zejména v&nbsp;prvních dvou dnech 
                                 menstruace. Důvodem vzniku může být anomálie tvaru nebo polohy dělohy, psychické 
-                                problémy, stres. Může být dále spojena s myomy (nezhoubné nádory) nebo zábranou 
+                                problémy, stres. Může být dále spojena s&nbsp;myomy (nezhoubné nádory) nebo zábranou 
                                 odtoku menstruační krve. Je potřeba návštěva gynekologa, který by měl provést 
                                 ultrazvukové vyšetření pro určení příčiny. Mohou být nasazeny léky proti 
                                 bolesti nebo proti křečím. Případně jsou chirurgicky odstraněny myomy či srůsty. 
                                 Mezi další doporučované metody zmírnění následků dysmenorey patří používání čajů 
-                                např. s kontryhelem, cvičení  a celkový klid a dostatek spánku.
+                                např. s&nbsp;kontryhelem, cvičení a celkový klid a dostatek spánku.
                             </p>
-                            <p>Nasazení perorální antikoncepce může napomoci potlačit příznaky dysmenorey. Ovšem u 
-                                velmi mladých dívek může být narušena hormonální rovnováha, může dojít ke komplikacím 
-                                v dalších oblastech jako kardiovaskulární atd. Dále je nutno mít na paměti, že je 
-                                po dobu používání perorální antikoncepce zastavena ovulace ženy, což může mít následně 
-                                následky v obtížích s otěhotněním.
+                            <p>Nasazení perorální antikoncepce může napomoci potlačit příznaky dysmenorey. Ovšem 
+                                u&nbsp;velmi mladých dívek může být narušena hormonální rovnováha, může dojít 
+                                ke komplikacím v&nbsp;dalších oblastech jako kardiovaskulární atd. Dále je nutno 
+                                mít na paměti, že je po dobu používání perorální antikoncepce zastavena ovulace 
+                                ženy, což může mít následně následky v&nbsp;obtížích s&nbsp;otěhotněním.
                             </p>
                         </div>
                     </div>
-                    <img class="img-responsive" src="./img/pexels-cottonbro-studio-6542724.jpg" alt="paní v bolestech opřená nohama o zeť">
+                    <img class="img-responsive nem__obr" src="./img/pexels-cottonbro-studio-6542724.jpg" alt="paní v bolestech opřená nohama o zeť">
                 </div>
-                <div>
+                <div class="nem__box">
                     <div>
                         <div>
                             <h3>Premenstruační syndrom (PMS)</h3>
                             <p>Nastává zhruba týden před menses. Projevuje se silnými výkyvy nálad, únavou, bolestí 
-                                břicha, bolestí hlavy. Často se tak děje v důsledku nedostatku železa v těle. 
-                                Neléčí se. Je nutno doporučit klid, odpočinek, spánek, vyváženou stravu s dostatkem 
+                                břicha, bolestí hlavy. Často se tak děje v&nbsp;důsledku nedostatku železa v&nbsp;těle. 
+                                Neléčí se. Je nutno doporučit klid, odpočinek, spánek, vyváženou stravu s&nbsp;dostatkem 
                                 železa, bylinní čaje pro ženy.
                             </p>
                         </div>
                         <div>
                             <h3>Endometriosa</h3>
-                            <p>Projevuje se u žen v reprodukčním věku. Projevuje se velmi silnými bolestmi v podbřišku, 
-                                kdy buňky sliznice děložní dutiny se nacházejí vně dutiny děložní a reagují v rámci 
-                                cyklu na hladiny pohlavních hormonů, což vede k bolestem, krvácení nebo zánětům. 
+                            <p>Projevuje se u žen v&nbsp;reprodukčním věku. Projevuje se velmi silnými bolestmi v&nbsp;podbřišku, 
+                                kdy buňky sliznice děložní dutiny se nacházejí vně dutiny děložní a reagují v&nbsp;rámci 
+                                cyklu na hladiny pohlavních hormonů, což vede k&nbsp;bolestem, krvácení nebo zánětům. 
                                 Zásadní projev této nemoci kromě velkých bolestí je neschopnost ženy otěhotnět, 
                                 případně to vede na mimoděložní otěhotnění či se objevuje krev moči nebo stolici. 
                                 Je potřeba návštěva gynekologa, kdy náročnou operací odstraní ložiska endometrické 
@@ -281,69 +311,69 @@
                             </p>
                         </div>
                     </div>
-                    <img class="img-responsive" src="./img/pexels-polina-zimmerman-3958577.jpg" alt="paní schoulená na křesle">
+                    <img class="img-responsive nem__obr" src="./img/pexels-polina-zimmerman-3958577.jpg" alt="paní schoulená na křesle">
                 </div>
-                <div>
+                <div class="nem__box">
                     <div>
                         <div>
                             <h3>Nepravidelná menses</h3>
-                            <p>Může se u ženy projevit kdykoli v průběhu reprodukčního života. Za relativně 
+                            <p>Může se u&nbsp;ženy projevit kdykoli v&nbsp;průběhu reprodukčního života. Za relativně 
                                 normální se považuje první 2 roky po menarché. Poté po 15 roce života ženy 
-                                nebo kdykoli v reprodukčním období po uplynutí více jak 3 měsíců nastává 
+                                nebo kdykoli v&nbsp;reprodukčním období po uplynutí více jak 3 měsíců nastává 
                                 tzv. Amorea. Vždy se vylučuje těhotenství a další organické poruchy 
                                 (endometria). Menopausa (přechod) nastává obvykle až mezi 49 a 51 rokem. 
-                                Nepravidelná menses nastává v důsledku hormonální nerovnováhy (hlavně 
-                                estrogenu a progesteronu), také v důsledku silného nebo dlouhodobého stresu 
+                                Nepravidelná menses nastává v&nbsp;důsledku hormonální nerovnováhy (hlavně 
+                                estrogenu a progesteronu), také v&nbsp;důsledku silného nebo dlouhodobého stresu 
                                 nebo změn antikoncepce, anorexie či jako následek endometriózy. Doporučuje 
                                 se psychologická konzultace, odstranění stresu, úprava jídelníčku a případně 
                                 hormonální doplňky stravy dle doporučení lékaře. Při prodloužení cyklu nad 
                                 35 dní se menses projeví silnějším krvácením. Při krátkém cyklu pod 22 dní 
-                                může vést k anémii. Za silní krvácení se považuje více jak 5 vložek za den, 
+                                může vést k&nbsp;anémii. Za silní krvácení se považuje více jak 5 vložek za den, 
                                 za slabé krvácení se považují 2 vložky za den.
                             </p>
                         </div>
                         <div>
                             <h3>Vaginální mykóza</h3>
-                            <p>Je olestivé onemocnění spojení s výtoky, které je způsobené kvasinkou Candida 
-                                Albicans. Může k němu dojít kdykoli v životě ženy (i u malých holčiček nebo 
-                                u žen po přechodu). Kvasinka se rychle v těle přemnoží po oslabení organismu 
+                            <p>Je olestivé onemocnění spojení s&nbsp;výtoky, které je způsobené kvasinkou Candida 
+                                Albicans. Může k&nbsp;němu dojít kdykoli v&nbsp;životě ženy (i u malých holčiček nebo 
+                                u žen po přechodu). Kvasinka se rychle v&nbsp;těle přemnoží po oslabení organismu 
                                 nebo po braní antibiotik, nebo po špatné hygieně, nebo po nošení spodního 
-                                prádla z umělých materiálů nebo po velkém přísunu cukru ze sladkostí (jídlo 
+                                prádla z&nbsp;umělých materiálů nebo po velkém přísunu cukru ze sladkostí (jídlo 
                                 nebo pití). Je potřeba návštěva lékaře, který předepíše speciální léky.
                             </p>
                         </div>
                     </div>
-                    <img class="img-responsive" src="./img/pexels-andrea-piacquadio-3807733.jpg" alt="žena sedící na posteli">
+                    <img class="img-responsive nem__obr" src="./img/pexels-andrea-piacquadio-3807733.jpg" alt="žena sedící na posteli">
                 </div>
-                <div>
+                <div class="nem__box">
                     <div>
                         <div>
                             <h3>Zánět vaječníků</h3>
                             <p>Je bolestivé infekční onemocnění, postihující dělohu, vejcovody, vaječníky, 
                                 případně pobřišnici, způsobené bakteriemi Chlamydia trachomatis. Je velmi 
-                                nebezpečné. Přenáší se hlavně pohlavním stykem, ale žena k nimi může přijít 
-                                i na špinavé toaletě, v sauně nebo v bazénu. Projevuje se zejména svěděním 
+                                nebezpečné. Přenáší se hlavně pohlavním stykem, ale žena k&nbsp;nimi může přijít 
+                                i na špinavé toaletě, v&nbsp;sauně nebo v bazénu. Projevuje se zejména svěděním 
                                 a výtoky, puchýřky na genitáliích, slabými krvácením a bolestí. Je potřeba 
                                 navštívit gynekologa, který provede laboratorní vyšetření na určení bakterie 
-                                a navrhne optimální léčbu. Může vést k neplodnosti. Prevencí je partnerská věrnost 
+                                a navrhne optimální léčbu. Může vést k&nbsp;neplodnosti. Prevencí je partnerská věrnost 
                                 a používání kondomu a dostatečná hygiena.
                             </p>
                         </div>
                         <div>
                             <h3>Herpes</h3>
                             <p>Je onemocnění, způsobené virem Herpes simplex 2. Je velmi infekční. Dochází 
-                                k němu při nechráněném pohlavním styku s infikovaným partnerem. Projevuje se 
+                                k&nbsp;němu při nechráněném pohlavním styku s&nbsp;infikovaným partnerem. Projevuje se 
                                 svěděním a puchýřky na genitáliích. Může se opakovat. Léčba je obtížná.
                             </p>
                         </div>
                     </div>
-                    <img class="img-responsive" src="./img/pexels-polina-zimmerman-3958584.jpg" alt="žena sedící na okně">
+                    <img class="img-responsive nem__obr" src="./img/pexels-polina-zimmerman-3958584.jpg" alt="žena sedící na okně">
                 </div>
                 <div>
                     <div>
                         <h3>Rakovina děložního čípku</h3>
-                        <p>Je infekční onemocnění, způsobené Papilomavirem, v důsledku střídání partnerů, špatné 
-                            hygieny, oslabené imunity nebo kouření. V ČR je infikováno přibližně 20 % žen. Je 
+                        <p>Je infekční onemocnění, způsobené Papilomavirem, v&nbsp;důsledku střídání partnerů, špatné 
+                            hygieny, oslabené imunity nebo kouření. V&nbsp;ČR je infikováno přibližně 20 % žen. Je 
                             potřeba navštívit gynekologa, který provede laboratorní vyšetření na určení viru a 
                             navrhne optimální léčbu. Prevencí je partnerská věrnost, používání kondomu a dobrá 
                             hygiena.
@@ -351,9 +381,9 @@
                     </div>
                     <div>
                         <h3>Rakovina prsu</h3>
-                        <p>Je nádorové onemocnění, kdy se v prsu může objevit bulka, kůže se stahuje dovnitř nebo 
+                        <p>Je nádorové onemocnění, kdy se v&nbsp;prsu může objevit bulka, kůže se stahuje dovnitř nebo 
                             mění vnější strukturu (pomerančovití). Zprvu se nijak neprojevuje, pak je prs 
-                            bolestivý. Zpravidla je výskyt vázán na rodinnou anamnézu, kdy se již v rodině podobné 
+                            bolestivý. Zpravidla je výskyt vázán na rodinnou anamnézu, kdy se již v&nbsp;rodině podobné 
                             onemocnění vyskytlo. Dále jsou rizikovými faktory, kouření, pití alkoholu, obezita, 
                             špatná fyzická aktivita, věk nad 45 let. Naopak prevencí je dobrá životospráva, pohyb, 
                             život bez stresu a kojení.
@@ -362,7 +392,7 @@
                     <div>
                         <h3>Neplodnost</h3>
                         <p>Počítá se po roce od okamžiku, kdy se partneři snažili o otěhotnění. Může být způsobeno 
-                            anatomickými anomáliemi, častými infekcemi, záněty, poruchami ovulace v důsledku 
+                            anatomickými anomáliemi, častými infekcemi, záněty, poruchami ovulace v&nbsp;důsledku 
                             hormonální nerovnováhy, věkem ženy nad 35 let.
                         </p>
                     </div>
@@ -375,11 +405,11 @@
             <a href="./index.html"><img src="./ico/logo.svg" alt="logo"></a>
             <nav>
                 <li><a href="./index.html">Domů</a></li>
-                <li><a href="./gallery.html">Na slovíčko</a></li>
-                <li><a href="./kontakt.html">O mně</a></li>
+                <li><a href="./gallery.html">Na&nbsp;slovíčko</a></li>
+                <li><a href="./kontakt.html">O&nbsp;mně</a></li>
             </nav>
             <div>
-                <p>Profil mé RP</p>
+                <p>Profil&nbsp;mé&nbsp;RP</p>
                 <a class="ig-foot" href="https://www.instagram.com/zenacyklu/" target="_blank">@zenacyklu</a>
             </div>
         </div>

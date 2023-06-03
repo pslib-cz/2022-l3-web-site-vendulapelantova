@@ -4,7 +4,17 @@
     --bg-foot:rgba(201, 117, 129, 1);
     --bg-pomucky: rgba(222, 122, 136, 0.45);
     --txbox:#ffffff;
-
+    --light: #ffffff;
+    --dark: #2b2b2b;
+    --black: #000;
+    --primary: var(--bg-foot);
+    --border: var(--hov);
+    --initial-clip-path: 0%;
+    --swiper-theme-color: var(--primary);
+    --swiper-pagination-bullet-size: 1em;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-progressbar-bg-color: var(--hov);
 }
 html{
     font-family: 'Hanken Grotesk', sans-serif;
@@ -53,13 +63,11 @@ h1{
     margin: 0;
     padding: 0;
     object-fit: cover;
-}/*
-.h2--ig::after{
-    content: url(../ico/Insta-nadpis.svg);
-    vertical-align: middle;
-    display: inline-block;
-    border-left: 1em;
-}*/
+}
+.selected{
+    text-decoration: underline;
+    font-weight: 800;
+}
 .h2--ig a{
     color: var(--text);
 }
@@ -73,7 +81,7 @@ h1{
     display: inline-block;
 }
 .fbox{
-    width: 330px;
+    width: 300px;
     height: 25em;
     padding: 1em;
     background-color: var(--bg-foot);
@@ -168,7 +176,6 @@ footer{
 }
 
 .pbox{
-    width: 304px;
     height: 350px;
     background-color: var(--txbox);
     box-shadow:  0px 0px 25px #D2E7EF;
