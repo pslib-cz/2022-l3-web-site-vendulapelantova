@@ -87,7 +87,7 @@
   }
   .title{
     font-weight: 700;
-    font-size: 39px;
+    font-size: 2.4em;
     margin-top: 1em;
   }
   .in__foto{
@@ -95,7 +95,7 @@
   }
   .h2{
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5em;
   }
   .faze{
     display: flex;
@@ -121,16 +121,16 @@
   }
   .foot__odkazy li{
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.em;
     margin-top: 0.5em;
   }
   .foot__odkazy p{
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5em;
+    line-height: 1.9em;
     margin-bottom: 0;
   }
   .foot__odkazy a{
-    font-size: 24px;
+    font-size: 1.5em;
   }
   
   .kontakt__ja .ig{
