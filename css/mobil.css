@@ -1,8 +1,4 @@
-@layer components, page, override;
-@import url(https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css)layer(components);
-/*Hamburger menu*/
-@layer page {
-  .navbar{height: 0;}
+.navbar{height: 0;}
   .container{
     display: flex;
     flex-direction: column;
@@ -107,7 +103,10 @@
     align-items: center;
     gap: 2em;
   }
-  
+  .ich__obr{
+    margin: 0 auto;
+    max-width: 25em;
+  }
   .foot{
     display: flex;
     flex-direction: column;
@@ -161,4 +160,3 @@
   .dot:hover {background-color: var(--primary);}
   /*mezera u karet*/
   .slider__content{gap: 5px;}
-}

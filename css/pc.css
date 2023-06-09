@@ -7,7 +7,7 @@ main{
     flex-direction: row;
     flex-wrap: nowrap;
 }
-.in__foto{ max-width: 30em;}
+
 .faze{grid-template-columns: repeat(4,1fr);}
 .swiper{
     margin-right: 2em;

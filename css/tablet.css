@@ -24,7 +24,7 @@
     font-size: 1.25em;
     background-color: var(--txbox);
 }
-
+.in__foto{ max-width: 30em;}
 
 .title{text-align: center;}
 .in__text{text-align: justify;}
@@ -45,7 +45,7 @@ img{max-width: fit-content;}
 .ich__box p{text-align: justify;}
 .ich__obr{
     min-width: 20em;
-    max-width: 45em;
+    max-width: 35em;
     order: 2;
 }
 .kontakt{
@@ -66,7 +66,7 @@ img{max-width: fit-content;}
 .kontakt__ja, .kontakt__skola{align-items: flex-start;}
 .uvod{text-align: justify;}
 .nem__obr{
-    max-height: 50em;
+    max-height: 20em;
     margin: 0 auto;
 }
 .nem p{
