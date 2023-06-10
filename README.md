@@ -10,11 +10,11 @@ Nezapomenu upravit odkazy a "aktivovat" GitHub Pages...
 ## ToDo
 - [x] Vytvořit repozitář projektu
 - [x] Vytvořit Figma projekt
-- [ ] Aktivovat GitHub Pages
+- [x] Aktivovat GitHub Pages
 - [x] Upravit README.md (aktualizace odkazů na Figmu a Web)
-- [ ] Hamburger menu (s JS)
-- [ ] Implementována [LightGallery](https://github.com/sachinchoolur/lightGallery)
-- [ ] Implementován [Swiper](https://swiperjs.com/) nebo [Glide](https://glidejs.com/)
-- [ ] ...desatero
-- [ ] Zcela funkční při vw 360px
-- [ ] Zcela funkční při vw 2560px
+- [x] Hamburger menu (s JS)
+- [x] Implementována [LightGallery](https://github.com/sachinchoolur/lightGallery)
+- [x] Implementován [Swiper](https://swiperjs.com/) nebo [Glide](https://glidejs.com/)
+- [x] ...desatero
+- [x] Zcela funkční při vw 360px
+- [x] Zcela funkční při vw 2560px
